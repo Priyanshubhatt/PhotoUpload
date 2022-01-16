@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background:rgb(70, 70, 70)" >
 <head>
   <meta charset="utf-8">
 
@@ -10,12 +10,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie-edge">  
 
+  <script>
+    function changeScreenSize(w,h)
+    {
+    window.resizeTo( w,h )
+    }
+    </script>
+
 </head>
-  <body>
+  <body onload="changeScreenSize(1200,260)">
     <div class="container">
       <div class="row">
         <div class="start" style="font-size:180%; margin-top: 15%; margin-left: 15%">
-          <h4>Photo Upload</h4>
+          <h4 style="font-size: 120%">Photo and File Upload</h4>
           <form method = "POST" action = "/" enctype="multipart/form-data" accept-charset="">
             <input type = 'file' name = 'imgFile' accept = ".jpg,.png" style="font-size: 75%; color: red; text-decoration: underline;">
             <input type = 'submit' name = 'upload' style="background:rgb(196, 24, 24); font-size: 75%">
